@@ -12,11 +12,20 @@ aside {
     display: grid;
     border: solid red 2px;
 }
-.display, .author, .description, .book  {
-    display: grid;
-    grid-template-rows: 1fr;
+.table-display, .author, .description, .book  {
     border: solid yellow 2px;
 }
+
+/*Table Style*/
+.table-display {
+    display: grid;
+    grid-template-rows: 1fr;
+    text-align: center;
+}
+tr {
+    justify-content: space-between;
+}
+
 footer {
     border: solid green 2px;
 }
