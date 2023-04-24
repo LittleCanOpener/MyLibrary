@@ -8,12 +8,17 @@
 header {
     border: solid blue 2px;
 }
-aside {
+main {
     display: grid;
-    border: solid red 2px;
+    align-items: baseline;
+    grid-template-columns: 1fr 2fr;
 }
-.table-display, .author, .description, .book  {
-    border: solid yellow 2px;
+.libary {
+    width: 25vw;
+    height: 25vh;
+    display: grid;
+    align-content: center;
+    border: solid red 2px;
 }
 
 /*Table Style*/
