@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&family=Poppins:ital,wght@1,200;1,400;1,500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+header {
+    border: solid blue 2px;
+}
+aside {
+    display: grid;
+    border: solid red 2px;
+}
+.display, .author, .description, .book  {
+    display: grid;
+    grid-template-rows: 1fr;
+    border: solid yellow 2px;
+}
+footer {
+    border: solid green 2px;
+}
