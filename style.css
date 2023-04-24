@@ -11,14 +11,15 @@ header {
 main {
     display: grid;
     align-items: baseline;
+    text-align: center;
     grid-template-columns: 1fr 2fr;
 }
 .libary {
-    width: 25vw;
-    height: 25vh;
-    display: grid;
     align-content: center;
     border: solid red 2px;
+}
+form {
+    display: grid;
 }
 
 /*Table Style*/

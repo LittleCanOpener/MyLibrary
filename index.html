@@ -29,19 +29,23 @@
                     <h1>My Libary</h1>
                     <form action="#" method="#">
                         <div>
-                            <input type="text" id="title" autocomplete="off" required>
                             <span>Title</span>
+                            <input type="text" id="title" autocomplete="off" required>
                         </div>
 
                         <div>
-                            <input type="text" id="name" autocomplete="off" required>
                             <span>Author</span>
-                            <input type = "file" name = "upload" accept = "image/*">
+                            <input type="text" id="name" autocomplete="off" required>
                         </div>
 
                         <div>
-                            <input type="text" id="number" autocomplete="off" required>
+                            <span>Book Cover</span>
+                            <input type="file" name="upload" accept="image/*">
+                        </div>
+
+                        <div>
                             <span>Pages</span>
+                            <input type="text" id="number" autocomplete="off" required>
                         </div>
                         <button class="submit" value="submit">Add Book</button>
                     </form>
@@ -49,6 +53,7 @@
             </section>
 
             <section class="table-display">
+                <h2>Books</h2>
                 <table>
                     <th>
                         <tr>
@@ -60,33 +65,6 @@
                     </th>
                     <tbody class="table-body"></tbody>
                 </table>
-            </section>
-            <!--Books & Logo-->
-            <section class="book">
-                <h2>Books & Logo</h2>
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                        <figcaption>
-                            <p></p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </section>
-            <!--Description & Author's name.-->
-            <section class="author, description">
-                <blockquote>
-                    <p></p>
-                    <span></span>
-                </blockquote>
-            </section>
-            <!--Publish Button-->
-            <section class="publish">
-                <div>
-                    <h3></h3>
-                    <p></p>
-                </div>
-                <button></button>
             </section>
         </main>
         <footer>
