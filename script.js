@@ -1,25 +1,32 @@
 // Submit Button & Local Storage
+// const form = document.querySelector("form");
 const form = document.getElementById("form");
 const title = document.getElementById("title");
 const author = document.getElementById("author");
-const number = document.getElementById("number");
+const pages = document.getElementById("pages");
 
-document.addEventListener("submit", function(e) {
+document.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const newTitleValue = title.value;
     const newNameValue = author.value;
-    const newNumberValue = number.value;
+    const newNumberValue = pages.value;
 
     window.sessionStorage.setItem("title", newTitleValue);
     window.sessionStorage.setItem("author", newNameValue);
-    window.sessionStorage.setItem("number", newNumberValue);
+    window.sessionStorage.setItem("pages", newNumberValue);
+
+    create();
 
     // window.localStorage.clear();
     // window.localStorage.remove("example-title");
-
-    document.getElementById("table-body").innerHTML = "title", "author", "number";
 });
 
+function create() {
+    const body = document.getElementById("body")
+    const figure = document.createElement("figure");
+    figure.setAttribute("id", "fig");
 
+    body.appendChild(figure);
+
+}
 
