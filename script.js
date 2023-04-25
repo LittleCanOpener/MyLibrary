@@ -11,14 +11,14 @@ document.addEventListener("submit", function(e) {
     const newNameValue = author.value;
     const newNumberValue = number.value;
 
-    window.localStorage.setItem("title", newTitleValue);
-    window.localStorage.setItem("author", newNameValue);
-    window.localStorage.setItem("number", newNumberValue);
+    window.sessionStorage.setItem("title", newTitleValue);
+    window.sessionStorage.setItem("author", newNameValue);
+    window.sessionStorage.setItem("number", newNumberValue);
 
-    // consider using sessionStorage rather than localStorage as it automatically clears itself.
     // window.localStorage.clear();
     // window.localStorage.remove("example-title");
 
+    document.getElementById("table-body").innerHTML = "title", "author", "number";
 });
 
 
