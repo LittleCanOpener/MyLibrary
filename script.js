@@ -8,6 +8,7 @@
 // Submit Button & Local Storage
 document.addEventListener("submit", (e) => {
     e.preventDefault();
+
     const newTitleValue = title.value;
     const newNameValue = author.value;
     const newNumberValue = pages.value;
@@ -16,19 +17,17 @@ document.addEventListener("submit", (e) => {
     window.sessionStorage.setItem("author", newNameValue);
     window.sessionStorage.setItem("pages", newNumberValue);
 
-    createFigure();
+    createFigure()
 
     // window.localStorage.clear();
     // window.localStorage.remove("example-title");
 });
 
 function createFigure() {
-
-        const body = document.getElementById("body")
-        const figure = document.createElement("figure");
-        const figcaption = document.createElement("figcaption");
-        figure.setAttribute("id", "fig");
-    
-        body.appendChild(figure);
-        fig.appendChild(figcaption);
+    const body = document.getElementById("body")
+    const figure = document.createElement("figure");
+    figure.setAttribute("id", "fig");
+    body.appendChild(figure);
+    const figcaption = document.createElement("figcaption");
+    figure.appendChild(figcaption);
 }
