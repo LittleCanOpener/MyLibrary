@@ -1,11 +1,9 @@
+// Submit Button & Local Storage
 const form = document.getElementById("form");
-
 const title = document.getElementById("title");
 const author = document.getElementById("author");
 const number = document.getElementById("number");
 
-
-// Submit Button
 document.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -16,6 +14,10 @@ document.addEventListener("submit", function(e) {
     window.localStorage.setItem("title", newTitleValue);
     window.localStorage.setItem("author", newNameValue);
     window.localStorage.setItem("number", newNumberValue);
+
+    // consider using sessionStorage rather than localStorage as it automatically clears itself.
+    // window.localStorage.clear();
+    // window.localStorage.remove("example-title");
 
 });
 
