@@ -1,36 +1,18 @@
-let libary = [];
+const addClass = (selector, className, scope) => {
+    (scope || document).querySelector(selector).classList.add(className)
+};
+addClas("body", "purple");
 
-//Storing IP Address in Local Storage
-function addBook () {
-    let book = {
-        title : document.getElementById("title").value,
-        author : document.getElementById("author").value,
-        pages : document.getElementById("pages").value
-    }
-    libary.push(book);
-
-    localStorage.setItem('MyLibary', JSON.stringify(libary) );
-    document.getElementById("container").innerHTML = localStorage.getItem('MyLibary');
-    document.querySelector("form").reset();
+//Process Raw Data
+const processRawUserInput = () => {
+    const rawData = document.querySelector("input").value;
+    const processedData = processUserInput(rawData)
+    const libaryForm = document.querySelectorAll("libaryForm");
+    libaryForm.innerHTML = processedData;
 }
-
-function createText() {
-    
-    const body = document.getElementById("body");
-    const text = document.createElement("p");
-
-    body.appendChild(text);
-    text.setAttribute("id", "container");
-    
+//Refine Processed Data
+const processUserInput = (inputValue) => {
+    const div = document.createElement("div");
+    div.textContent = inputValue;
+    return div.innerHTML;
 }
-
-// Main Event
-document.addEventListener("submit", (ev) => {
-    ev.preventDefault();
-
-    createText();
-    addBook();
-});
-
-
-
