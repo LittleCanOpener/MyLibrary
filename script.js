@@ -1,6 +1,3 @@
-    // window.sessionStorage.setItem
-    // window.localStorage.clear();
-    // window.localStorage.remove("example-title");
 let libary = [];
 
 //Storing IP Address in Local Storage
@@ -12,29 +9,26 @@ function addBook () {
     }
     libary.push(book);
 
-    sessionStorage.setItem('MyLibary', JSON.stringify(libary) );
+    sessionStorage.setItem('MyLibary', JSON.stringify());
     document.querySelector("form").reset();
 }
-// Creating Figure & Figcaption
-function createFigure() {
+
+function createText() {
     
     const body = document.getElementById("body");
-    const figure = document.createElement("p");
+    const text = document.createElement("p");
 
-    body.appendChild(figure);
-    figure.setAttribute("id", "container");
+    body.appendChild(text);
+    text.setAttribute("id", "container");
     document.getElementById("container").innerHTML = sessionStorage.getItem('MyLibary');
     
-
-  
 }
 
 // Main Event
 document.addEventListener("submit", (ev) => {
     ev.preventDefault();
-
-    createFigure()
-    addBook()
+    createText();
+    addBook();
 });
 
 
