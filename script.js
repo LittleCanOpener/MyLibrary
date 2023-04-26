@@ -9,7 +9,8 @@ function addBook () {
     }
     libary.push(book);
 
-    sessionStorage.setItem('MyLibary', JSON.stringify());
+    localStorage.setItem('MyLibary', JSON.stringify(libary) );
+    document.getElementById("container").innerHTML = localStorage.getItem('MyLibary');
     document.querySelector("form").reset();
 }
 
@@ -20,13 +21,13 @@ function createText() {
 
     body.appendChild(text);
     text.setAttribute("id", "container");
-    document.getElementById("container").innerHTML = sessionStorage.getItem('MyLibary');
     
 }
 
 // Main Event
 document.addEventListener("submit", (ev) => {
     ev.preventDefault();
+
     createText();
     addBook();
 });
