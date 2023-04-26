@@ -5,9 +5,8 @@
 
 // Submit Button & Local Storage
 let libary = [];
-//el would be the element that received the click event. ev is the actual click event itself
-const addBook = (ev)=>{
-    ev.preventDefault();
+// Storing IP Address in Local Storage
+function addBook () {
     let book = {
         id: Date.now(),
         title: document.getElementById("title").value,
@@ -16,12 +15,12 @@ const addBook = (ev)=>{
     }
     libary.push(book);
     document.querySelector("form").reset();
-    localStorage.setItem("MyLibary", JSON.stringify(libary) );
+    localStorage.setItem("MyLibary", JSON.stringify(libary));
 }
 
 // Creating Elements
 function createFigure() {
-    const body = document.getElementById("body")
+    const body = document.getElementById("body");
     const figure = document.createElement("figure");
     // Creating Figure & Figcaption
     figure.setAttribute("id", "fig");
@@ -31,9 +30,10 @@ function createFigure() {
     figure.appendChild(figcaption);
 }
 
-// Please end my suffering
-document.addEventListener("submit", addBook); (e) => {
-    e.preventDefault();
+//el would be the element that received the click event. ev is the actual click event itself
+document.addEventListener("submit", (ev) => {
+    ev.preventDefault();
     createFigure()
+    addBook()
 
-};
+});
