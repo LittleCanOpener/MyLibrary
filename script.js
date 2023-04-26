@@ -19,19 +19,13 @@ function addBook () {
 function createFigure() {
     
     const body = document.getElementById("body");
-    const figure = document.createElement("figure");
-    const figcaption = document.createElement("figcaption");
+    const figure = document.createElement("p");
 
     body.appendChild(figure);
-    figure.setAttribute("id", "outer-container-img");
-
-    document.getElementById("outer-container-img").innerHTML = sessionStorage.getItem('MyLibary');
-    
-    figure.appendChild(figcaption);
-    figcaption.setAttribute("id", "container-img");
+    figure.setAttribute("id", "container");
+    document.getElementById("container").innerHTML = sessionStorage.getItem('MyLibary');
     
 
-    // document.getElementById("container-img").innerHTML = sessionStorage.getItem('#');
   
 }
 

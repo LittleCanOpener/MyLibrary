@@ -29,6 +29,7 @@ form {
     text-align: center;
 }
 tr {
+    border: solid red 2px;
     justify-content: space-between;
 }
 

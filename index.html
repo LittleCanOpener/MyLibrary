@@ -29,20 +29,20 @@
                     <h1>My Libary</h1>
                     <form id="libaryForm" action="#" method="#">
                         <div>
-                            <span for="title">Title</span>
+                            <span>Title</span>
                             <input type="text" id="title" name="title" autocomplete="off" required>
                         </div>
 
                         <div>
-                            <span for="author">Author</span>
+                            <span>Author</span>
                             <input type="text" id="author" name="author" autocomplete="off" required>
                         </div>
 
                         <div>
-                            <span for="pages">Pages</span>
+                            <span>Pages</span>
                             <input type="text" id="pages" name="pages" autocomplete="off" required>
                         </div>
-                        
+
                         <button class="submit" value="submit">Add Book</button>
                     </form>
                 </aside>
@@ -52,14 +52,9 @@
                 <h2>Books</h2>
                 <table>
                     <th>
-                        <tr>
-                            <td>Title</td>
-                            <td>Author</td>
-                            <td>Pages</td>
-                            <td>Added</td>
+                        <tr id="body">
                         </tr>
                     </th>
-                    <tbody id="body"></tbody>
                 </table>
             </section>
         </main>
