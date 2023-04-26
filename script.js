@@ -13,9 +13,11 @@ function addBook () {
         author: document.getElementById("author").value,
         pages: document.getElementById("pages").value
     }
+    
     libary.push(book);
     document.querySelector("form").reset();
     sessionStorage.setItem('MyLibary', JSON.stringify(libary) );
+    document.getElementById('outer-container-img').innerHTML = sessionStorage.getItem('MyLibary')
 }
 
 // Creating figure
@@ -24,6 +26,7 @@ function createFigure() {
     const body = document.getElementById("body");
     const figure = document.createElement("figure");
     figure.setAttribute("id", "outer-container-img");
+    
     body.appendChild(figure);
 
     const figcaption = document.createElement("figcaption");
@@ -38,7 +41,5 @@ document.addEventListener("submit", (ev) => {
 
     createFigure()
     addBook()
-
 });
 
-// document.getElementById('outer-container-img').innerHTML = sessionStorage.getItem('MyLibary')
