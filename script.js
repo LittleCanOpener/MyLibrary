@@ -8,14 +8,13 @@ let libary = [];
 // Storing IP Address in Local Storage
 function addBook () {
     let book = {
-        id: Date.now(),
         title: document.getElementById("title").value,
         author: document.getElementById("author").value,
         pages: document.getElementById("pages").value
     }
     libary.push(book);
     document.querySelector("form").reset();
-    localStorage.setItem("MyLibary", JSON.stringify(libary));
+    sessionStorage.setItem('MyLibary', JSON.stringify(libary) );
 }
 
 // Creating Elements
