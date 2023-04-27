@@ -3,10 +3,9 @@ let libary = [];
 
 //Storing IP Address in Local Storage
 function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+    this.Title = title;
+    this.Author = author;
+    this.Pages = pages;
 }
 function addBook () {
     const title = document.getElementById("title").value;
@@ -25,13 +24,10 @@ function addBook () {
 }
 
 function createText() {
-    
     const body = document.getElementById("body");
-    const text = document.createElement("div");
-
+    const text = document.createElement("div")
     body.appendChild(text);
     text.setAttribute("id", "container");
-    
 }
 
 // Main Event
