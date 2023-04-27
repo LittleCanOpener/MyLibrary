@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 let libary = [];
 
 //Storing IP Address in Local Storage
@@ -19,7 +20,7 @@ function addBook () {
 		document.querySelector("form").reset();
     } 
     else {
-        alert('Form not filled out')
+        alert('Form not filled out');
 	}
 }
 
