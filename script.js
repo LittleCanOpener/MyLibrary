@@ -11,15 +11,10 @@ function addBook () {
     let a = document.getElementById("title").value;
     let b = document.getElementById("author").value;
     let c = document.getElementById("pages").value;
-
-	if (a !== '' && b !== '' && c !== '' ){
-        libary.push(new Book(a, b, c));
-		localStorage.setItem('MyLibary', JSON.stringify(libary));
-        createText();
-    } 
-    else {
-        alert('Form not filled out');
-	}
+    // Saving Values
+    libary.push(new Book(a, b, c));
+    localStorage.setItem('MyLibary', JSON.stringify(libary));
+    createText();
 }
 
 function createText() {
@@ -27,6 +22,7 @@ function createText() {
     const text = document.createElement("div");
     body.appendChild(text);
     text.setAttribute("id", "container");
+    // Displaying stored values
     document.getElementById("container").innerHTML = localStorage.getItem('MyLibary');
     document.querySelector("form").reset();
 }
