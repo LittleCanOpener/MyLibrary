@@ -27,7 +27,7 @@ function addBook () {
 function createText() {
     
     const body = document.getElementById("body");
-    const text = document.createElement("p");
+    const text = document.createElement("div");
 
     body.appendChild(text);
     text.setAttribute("id", "container");
