@@ -1,13 +1,12 @@
 /*jshint esversion: 6 */
 let libary = [];
-
 //Storing IP Address in Local Storage
 function Book(title, author, pages) {
     this.Title = title;
     this.Author = author;
     this.Pages = pages;
 }
-
+// Arry's
 function addBook () {
     let a = document.getElementById("title").value;
     let b = document.getElementById("author").value;
