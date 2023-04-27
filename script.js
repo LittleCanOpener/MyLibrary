@@ -9,13 +9,14 @@ function Book(title, author, pages) {
 }
 
 function addBook () {
-    const title = document.getElementById("title").value;
-    const author = document.getElementById("author").value;
-    const pages = document.getElementById("pages").value;
-    
-	if (title !== '' && author !== '' && pages !== '' ){
-        libary.push(new Book(title, author, pages));
-		localStorage.setItem('MyLibary', JSON.stringify(libary) );
+    let a = document.getElementById("title").value;
+    let b = document.getElementById("author").value;
+    let c = document.getElementById("pages").value;
+
+	if (a !== '' && b !== '' && c !== '' ){
+        libary.push(new Book(a, b, c));
+		localStorage.setItem('MyLibary', JSON.stringify(libary));
+        createText();
     } 
     else {
         alert('Form not filled out');
@@ -24,10 +25,10 @@ function addBook () {
 
 function createText() {
     const body = document.getElementById("body");
-    const text = document.createElement("div")
+    const text = document.createElement("div");
     body.appendChild(text);
     text.setAttribute("id", "container");
-    document.getElementById("container").innerHTML = localStorage.getItem('MyLibary')
+    document.getElementById("container").innerHTML = localStorage.getItem('MyLibary');
     document.querySelector("form").reset();
 }
 
@@ -35,6 +36,4 @@ function createText() {
 document.addEventListener("submit", (ev) => {
     ev.preventDefault();
     addBook();
-    createText();
-    
 });
