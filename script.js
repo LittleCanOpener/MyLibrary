@@ -18,10 +18,10 @@ function addBook () {
 }
 
 function createText() {
-    const body = document.getElementById("body");
-    const text = document.createElement("div");
-    body.appendChild(text);
-    text.setAttribute("id", "container");
+    const output = document.getElementById("output");
+    const div = document.createElement("div");
+    output.appendChild(div);
+    div.setAttribute("id", "container");
     // Displaying stored values
     document.getElementById("container").innerHTML = localStorage.getItem('MyLibary');
     document.querySelector("form").reset();
