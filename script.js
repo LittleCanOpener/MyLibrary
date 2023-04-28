@@ -28,7 +28,7 @@ class UI {
     }
     //Deleting GrandparentElement
     static deleteBook(el){
-        if (el.classList.contains('delete')){
+        if (el.classList.contains('delete')) {
             el.parentElement.parentElement.remove();
         }
     }
@@ -46,23 +46,27 @@ class Store {
         let books;
         if(localStorage.getItem('books') === null) {
             books = [];
-        }else{
-            books = JSON.parse(localStorage.getItem('books'));
+        } else {
+        books = JSON.parse(localStorage.getItem('books'));
         }
         return books;
     }
+
     static addBook(book){
         const books = Store.getBooks();
         books.push(book);
         localStorage.setItem('books', JSON.stringify(books));
     }
-    static removeBook(){
+
+    static removeBook(pages) {
         const books = Store.getBooks();
-        books.forEach((book, index)=> {
-            if(book.title === title){
-                books.splice(index, 1);
-            }
+    
+        books.forEach((book, index) => {
+          if(book.pages === pages) {
+            books.splice(index, 1);
+          }
         });
+    
         localStorage.setItem('books', JSON.stringify(books));
     }
 }
@@ -88,5 +92,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 // Event Remove a Book
 document.querySelector('#output').addEventListener('click', (e)=> {
-    UI.deleteBook(e.target)
-})
+    UI.deleteBook(e.target);
+    
+    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+});
