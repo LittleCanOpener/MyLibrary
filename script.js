@@ -11,22 +11,7 @@ class Book {
 // UI Class: Handle UI Tasks
 class UI {
     static displayBooks(){
-        const StoredBooks = [
-            {
-                title:'Book One',
-                author:'John Doe',
-                pages:'140'
-            },
-            {
-                title:'Book Two',
-                author:'John Glow',
-                pages:'1650'
-            }
-        ]
-        // Get from local storage
-
-        // setting books to arry
-        const books = StoredBooks;
+        const books = Store.getBooks();
         books.forEach((book) => UI.addBookToList(book));
     }
     static addBookToList(book) {
@@ -41,6 +26,7 @@ class UI {
         `;
         output.appendChild(row)
     }
+    //Deleting GrandparentElement
     static deleteBook(el){
         if (el.classList.contains('delete')){
             el.parentElement.parentElement.remove();
@@ -55,28 +41,51 @@ class UI {
 }
 
 // Store Class: Handles Storage
+class Store {
+    static getBooks() {
+        let books;
+        if(localStorage.getItem('books') === null) {
+            books = [];
+        }else{
+            books = JSON.parse(localStorage.getItem('books'));
+        }
+        return books;
+    }
+    static addBook(book){
+        const books = Store.getBooks();
+        books.push(book);
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+    static removeBook(){
+        const books = Store.getBooks();
+        books.forEach((book, index)=> {
+            if(book.title === title){
+                books.splice(index, 1);
+            }
+        });
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+}
 
-
-// Events Display Books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
-// Event Add a Book
-document.querySelector('#book-form').addEventListener('submit', (e) => {
-    
+document.querySelector('#book-form').addEventListener('submit', (e) => { 
     e.preventDefault();
     // Get Values
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
-
     // Instatiate Book
-    const book = new Book(title, author,pages)
+    const book = new Book(title, author,pages);
     // Adding Book To UI
     UI.addBookToList(book);
+    // Add book to localstorage
+    Store.addBook(book);
+    // Clearing Form after Submiting
     UI.clearFields();
-    console.log(book)
-
+    
 });
+
 // Event Remove a Book
 document.querySelector('#output').addEventListener('click', (e)=> {
     UI.deleteBook(e.target)
