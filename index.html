@@ -25,32 +25,33 @@
         <main>
             <!--Side Navigation & Adding Books-->
             <section class="libary">
-                <aside>
                     <h1>My Libary</h1>
-                    <form id="libaryForm" action="#" method="#">
-                        <div>
-                            <label>Title</label>
-                            <input type="text" id="title" name="title" autocomplete="off" required>
+                    <form id="book-form">
+                        <div class="form-container">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" autocomplete="off" required>
                         </div>
 
-                        <div>
-                            <label>Author</label>
-                            <input type="text" id="author" name="author" autocomplete="off" required>
+                        <div class="form-container">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" autocomplete="off" required>
                         </div>
 
-                        <div>
-                            <label>Pages</label>
-                            <input type="text" id="pages" name="pages" autocomplete="off" required>
+                        <div class="form-container">
+                            <label for="pages">Pages</label>
+                            <input type="text" id="pages" autocomplete="off" required>
                         </div>
-
-                        <button class="submit" value="submit">Add Book</button>
+                        <button class="submit" value="Add Book">Add Book</button>
                     </form>
-                </aside>
-            </section>
-
-            <section>
-                <h2>Books</h2>
-                <div id="output"></div>
+                    <table>
+                        <thead class="table table-heading">
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Pages</th>
+                            <th></th>
+                        </thead>
+                        <tbody id="output"></tbody>
+                    </table>
             </section>
         </main>
         <footer>
