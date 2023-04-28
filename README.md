@@ -142,7 +142,7 @@
     </a></li>
 </ul>
 
-<li>Lighthouse Validator Results:</li><hr><h4>Desktop:</h4>
+<h3>Lighthouse Validator Results:</h3><h4>Desktop:</h4>
 <img src="#">
 <h4>Moblie:</h4>
 <img src="#">
