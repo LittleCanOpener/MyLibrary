@@ -50,7 +50,7 @@
 <h3>Google Fonts:</h3>
 <p>
     <img src="./assets/images/icons/googlefonts.svg" width="50px" height="50px"><br>
-    <a href="https://fonts.google.com/" target="_blank">Google Fonts</a><br>
+    <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> was used for all the text content on the site pages.<br>
 </p><hr>
 
 <h3>GitPod:</h3>
@@ -70,7 +70,18 @@
 <p>
     <img src="./assets/images/icons/googledevtools.png" width="50px" height="50px" role="img" viewBox="0 0 24 24"><br>
     Developer Tools was used for trouble shooting and trying new visual changes without it affect the current code already created.
-</p><hr>
+</p>
+ <h4>How to access Lighthouse without Extension:</h4>
+<ol>
+    <li>
+        On any website if you are on windows you can press F12 on your keyboard and it will open the developer tool.
+    </li>
+    <li>
+        Or you can use the hotkeys.<br> 
+        CTRL + SHIFT + I
+    </li>
+</ol>
+<hr>
 
 
 <h3>Lighthouse:</h3>
