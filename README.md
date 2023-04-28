@@ -140,6 +140,8 @@
     <li>W3C <a href="https://jigsaw.w3.org/css-validator/#validate_by_input"
     target="_blank">CSS Validator Results
     </a></li>
+    <li>JSHint <a href="https://jshint.com/" target="_blank">
+    JavaScript</a></li>
 </ul>
 
 <h3>Lighthouse Validator Results:</h3><h4>Desktop:</h4>
