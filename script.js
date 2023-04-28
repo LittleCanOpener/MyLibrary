@@ -15,12 +15,12 @@ class UI {
             {
                 title:'Book One',
                 author:'John Doe',
-                Pages:'140'
+                pages:'140'
             },
             {
                 title:'Book Two',
                 author:'John Glow',
-                Pages:'1650'
+                pages:'1650'
             }
         ]
         // Get from local storage
