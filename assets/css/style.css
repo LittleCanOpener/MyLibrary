@@ -23,6 +23,9 @@ input {
     font-size: 1em;
     height: 3em;
 }
+a:link {
+    text-decoration: none;
+}
 .form-container {
     display: grid;
     align-items: baseline;
