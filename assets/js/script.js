@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
+// tells JSHint that I'm using ECMAScript 6 specific syntax
 
-// Book Class: Represents a Book
+// Book Class: represents a book
 class Book {
     constructor(title, author, pages){
         this.title = title;
@@ -8,7 +9,7 @@ class Book {
         this.pages = pages;
     }
 }
-// UI Class: Handle UI Tasks
+// UI Class: Handle user interface tasks
 class UI {
     static displayBooks(){
         const books = Store.getBooks();
@@ -79,13 +80,9 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
-    // Instatiate Book
     const book = new Book(title, author,pages);
-    // Adding Book To UI
     UI.addBookToList(book);
-    // Add book to localstorage
     Store.addBook(book);
-    // Clearing Form after Submiting
     UI.clearFields();
     
 });
@@ -93,6 +90,5 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 // Event Remove a Book
 document.querySelector('#output').addEventListener('click', (e)=> {
     UI.deleteBook(e.target);
-    
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
