@@ -23,7 +23,7 @@ class UI {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.pages}</td>
-        <td><a href="#" class="delete"</a>X</td>
+        <td><a href="#" class="delete"</a>Delete</td>
         `;
         output.appendChild(row)
     }

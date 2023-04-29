@@ -41,7 +41,7 @@ label {
 }
 /*Submit button*/
 
-.submit {
+.submit, .delete {
     margin-top: 1em;
     font-size: 1.2em;
     background-color: #EDF7F6;
@@ -56,17 +56,17 @@ label {
     padding: 16px;
 }
 
-.submit:disabled {
+.submit:disabled, .delete:disabled {
     cursor: default;
 }
-.submit:focus {
+.submit:focus, .delete:focus {
     box-shadow: #222E50 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #EDF7F6 0 -3px 0 inset;
 }
-.submit:hover {
+.submit:hover, .delete:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #EDF7F6 0 -3px 0 inset;
     transform: translateY(-5px);
 }
-.submit:active {
+.submit:active, .delete:active {
     box-shadow: #222E50 0 3px 7px inset;
     transform: translateY(5px);
 }
