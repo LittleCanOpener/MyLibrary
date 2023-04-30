@@ -1,5 +1,5 @@
 # Brainnest Project Three & Four - Library - Advanced Course
-<img src="#">
+<img src="./assets/images/am-i-responsive.png">
 <h1>Deployment</h1>
 
 <ul>
@@ -24,7 +24,7 @@
     </li>
 </ul><hr>
 <h2>
-    <a href="#" target="_blank"> Live Preview</a>
+    <a href="https://littlecanopener.github.io/MyLibrary/" target="_blank"> Live Preview</a>
 </h2>
 <hr>
 <ul>
