@@ -45,7 +45,9 @@ main {
     box-shadow: #222E50 0 3px 7px inset;
     transform: translateY(5px);
 }
-
+.delete{
+    display: block;
+}
 /*Output & Table/Input*/
 #book-form {
     display: grid;
@@ -63,6 +65,7 @@ a:link {
     border-radius: 5px;
 }
 label {
+    padding: 0.9em;
     font-size: 1.2em;
 }
 input {
@@ -88,7 +91,15 @@ input {
 .table-container tr {
     padding: 2em 2rem;
 }
-#output {
+#output > tr {
     margin: 1rem;
-    border-bottom: 2px solid;
+    border: 1px solid;
+    border-left: none;
+    border-right: none;
 }
+#output > tr:first-child {
+    border-top: none;
+  }
+#output > tr:last-child {
+    border-bottom: none;
+  }
