@@ -28,30 +28,34 @@
                     <h1>My Libary</h1>
                     <form id="book-form">
                         <div class="form-container">
-                            <label for="title">Title</label>
+                            <label for="title">*Title</label>
                             <input type="text" id="title" autocomplete="off" placeholder="Name of the book." required>
                         </div>
 
                         <div class="form-container">
-                            <label for="author">Author</label>
+                            <label for="author">*Author</label>
                             <input type="text" id="author" autocomplete="off" placeholder="Author of the book." required>
                         </div>
 
                         <div class="form-container">
-                            <label for="pages">Pages</label>
-                            <input type="text" id="pages" autocomplete="off" placeholder="How many pages" required>
+                            <label for="pages">*Pages</label>
+                            <input type="number" id="pages" autocomplete="off" placeholder="How many pages" required>
                         </div>
                         <button class="submit" value="Add Book">Add Book</button>
                     </form>
-                    <table>
-                        <thead class="table table-heading">
+            </section>
+            <section class="libary-output">
+                <table class="table-container">
+                    <thead>
+                        <tr class="table-heading">
                             <th>Title</th>
                             <th>Author</th>
                             <th>Pages</th>
                             <th></th>
-                        </thead>
-                        <tbody id="output"></tbody>
-                    </table>
+                        </tr>
+                    </thead>
+                    <tbody id="output"></tbody>
+                </table>
             </section>
         </main>
         <footer>

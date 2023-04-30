@@ -6,45 +6,14 @@
     font-family: Poppins, sans-serif;
     color: #E2725B;
 }
-
-/*Table Style*/
 main {
     background-color: #222E50;
-    display: grid;
-    align-items: baseline;
     text-align: center;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    padding: 15px;
 }
-input {
-    text-align: center;
-    border: none;
-    border-radius: 6px;
-    font-size: 1em;
-    height: 3em;
-}
-a:link {
-    text-decoration: none;
-}
-.form-container {
-    display: grid;
-    align-items: baseline;
-    text-align: center;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    margin-top: 1em;
-    margin-left: 0.9em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 12px;
-    background-color: #EDF7F6 ;
-    border-radius: 5px;
-}
-label {
-    font-size: 1.5em;
-}
-/*Submit button*/
-
-.submit, .delete {
+/*Submit button & Delete Button*/
+.submit, 
+.delete {
     margin-top: 1em;
     font-size: 1.2em;
     background-color: #EDF7F6;
@@ -58,18 +27,68 @@ label {
     touch-action: manipulation;
     padding: 16px;
 }
-
-.submit:disabled, .delete:disabled {
+.submit:disabled, 
+.delete:disabled {
     cursor: default;
 }
-.submit:focus, .delete:focus {
+.submit:focus, 
+.delete:focus {
     box-shadow: #222E50 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #EDF7F6 0 -3px 0 inset;
 }
-.submit:hover, .delete:hover {
+.submit:hover, 
+.delete:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #EDF7F6 0 -3px 0 inset;
     transform: translateY(-5px);
 }
-.submit:active, .delete:active {
+.submit:active, 
+.delete:active {
     box-shadow: #222E50 0 3px 7px inset;
     transform: translateY(5px);
+}
+
+/*Output & Table/Input*/
+#book-form {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+a:link {
+    text-decoration: none;
+}
+.form-container {
+    margin-top: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 12px;
+    background-color: #EDF7F6 ;
+    border-radius: 5px;
+}
+label {
+    font-size: 1.2em;
+}
+input {
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    height: 3em;
+}
+.libary-output {
+    display: grid;
+    justify-content: center;
+}
+.table-container {
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+.table-heading {
+    text-align: center;
+    font-weight: bold;
+}
+.table-container th,
+.table-container tr {
+    padding: 2em 2rem;
+}
+#output {
+    margin: 1rem;
+    border-bottom: 2px solid;
 }
