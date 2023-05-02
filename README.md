@@ -131,6 +131,17 @@
 <p>
     JavaScript has become integral to the Internet experience as developers build increased interaction and complexity into their applications. Search engines, ecommerce, content management systems, responsive design, social media and phone apps would not be possible without it.
 </p>
+<hr>
+<h3>JSON:</h3>
+<p>
+    <img src="./assets/images/icons/json.png" width="50px" height="50px"><br>
+    <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>
+</p>
+<h4>Why JSON :</h4>
+<p>
+    JSON has gained momentum in API code programming and web services because it helps in faster data interchange and web service results. It is text-based, lightweight, and has an easy-to-parse data format requiring no additional code for parsing.
+</p>
+
 
 <h1>Testing</h1>
 <h3>Code Validators</h3>
@@ -142,6 +153,8 @@
     </a></li>
     <li>JSHint <a href="https://jshint.com/" target="_blank">
     JavaScript</a></li>
+    <li>JSON Formatter & Validator <a href="https://jsonformatter.curiousconcept.com/" target="_blank">
+    JSON</a></li>
 </ul>
 
 <h3>Lighthouse Validator Results:</h3><h4>Desktop:</h4>
