@@ -132,10 +132,11 @@
     JavaScript has become integral to the Internet experience as developers build increased interaction and complexity into their applications. Search engines, ecommerce, content management systems, responsive design, social media and phone apps would not be possible without it.
 </p>
 <hr>
-<h3>JSON:</h3>
+<h3>JavaScript Object Notation (JSON):</h3>
 <p>
     <img src="./assets/images/icons/json.png" width="50px" height="50px"><br>
-    <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>
+    <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a><br>
+    <a href="https://www.json.org/json-en.html" target="_blank">More Information</a>
 </p>
 <h4>Why JSON :</h4>
 <p>
