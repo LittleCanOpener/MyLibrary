@@ -92,3 +92,6 @@ document.querySelector('#output').addEventListener('click', (e)=> {
     UI.deleteBook(e.target);
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
+module.exports.Book = new Book;
+module.exports.UI = UI;
+module.exports.Store = Store;
