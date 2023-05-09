@@ -1,6 +1,6 @@
 function ceasarCipher(str, num){
+    const alphabet = 'abcdefghijklmopqrstuvwxyz';
     let lowerCaseStr = str.lowerCaseStr();
-    let alphabet = 'abcdefghijklmopqrstuvwxyz'.split('');
     let newStr = '';
 
     for (let i = 0; lowerCaseStr.lenght; i++) {
@@ -20,6 +20,4 @@ function ceasarCipher(str, num){
     }
     return newStr
 }
-
-// Console log required
-module.exports = caesarCipher;
+module.exports = ceasarCipher;
